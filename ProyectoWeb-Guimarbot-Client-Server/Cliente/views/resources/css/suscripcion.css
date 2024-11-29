@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sidebar {
+    width: 300px;
+    height: 990px;
+    background-color: var(--secundario2); /* Reemplazado #2b2b5e */
+    color: var(--white);
+    padding: 20px;
+    position: fixed; /* Agregado para fijar la barra lateral */
+    margin-top: -20px;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.profile p {
+    font-size: 14px;
+    margin: 3px 0;
+}
+
+/* Menú */
+.menu ul {
+    list-style: none;
+    padding: 10px;
+}
+
+.menu ul li {
+    margin: 15px 0;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 16px;
+}
+
+.menu ul li a:hover {
+    text-decoration: underline;
+}
+
+.section-encabezado {
+    margin-top: 20px;
+    padding: 20px;    
+}
+
+.section-encabezado h2 {
+    font-weight: bold;
+    color: var(--secundario2); /* Reemplazado #2b2b5e */
+    margin-left: 310px;
+    margin-bottom: 10px;
+}
+
+.section-encabezado p {
+    margin-left: 310px;
+    font-size: 16px;
+    color: var(--terciario1); /* Reemplazado #333 */
+}
+
+.subscription-box {
+    margin-top: 10px;
+    margin-left: 320px;
+    width: 60%;
+    background-color: var(--white); /* Reemplazado #ffffff */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.subscription-header {
+    background-color: var(--secundario2); /* Reemplazado #2b2b5e */
+    padding: 15px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    text-align: left;
+}
+
+.subscription-header h2 {
+    font-size: 30px;
+    color: var(--white); /* Reemplazado #ffffff */
+    font-weight: bold;
+}
+
+.subscription-body {
+    padding: 20px;
+}
+
+.subscription-body h3 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.subscription-body ul {
+    list-style: none;
+    padding: 0;
+}
+
+.subscription-body li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.subscription-body li i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.subscription-body li .bi-check-circle-fill {
+    color: var(--primario2); /* Reemplazado #green */
+}
+
+.subscription-body li .bi-x-circle-fill {
+    color: var(--alert); /* Reemplazado #red */
+}
+
+/* Planes */
+.planes {
+    margin-left: 300px;
+    padding: 40px 40px 60px 40px;
+}
+
+.icon-shop {
+    font-size: 2.5rem;
+    color: var(--white);
+    background-color: var(--secundario2); /* Reemplazado #1b1464 */
+    padding: 8px 19px;
+    border-radius: 50%;
+    margin: 10px 0;
+}
+
+.planes-titulo {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.planes .column {
+    padding: 20px;
+    border: 1px solid var(--light-gray-translucent); /* Reemplazado #8080804d */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: color 0.2s ease-in, background-color 0.2s ease-in;
+}
+
+.planes .column:hover {
+    color: var(--white);
+    background-color: var(--dark); /* Reemplazado #1b1b32 */
+}
+
+.column h4 {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .planes {
+        padding: 30px 20px 40px 20px;
+    }
+    
+    .planes .column {
+        padding: 15px;
+    }
+    
+    .icon-shop {
+        font-size: 2rem;
+        padding: 6px 16px;
+    }
+
+    .planes-titulo {
+        font-size: 22px;
+    }
+    
+    .column h4 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .planes {
+        padding: 20px 10px 30px 10px;
+    }
+    
+    .planes .column {
+        padding: 10px;
+    }
+    
+    .icon-shop {
+        font-size: 1.8rem;
+        padding: 5px 14px;
+    }
+
+    .planes-titulo {
+        font-size: 20px;
+    }
+    
+    .column h4 {
+        font-size: 13px;
+    }
+}
+
+/* Estilos existentes */
+.sidebar {
+    width: 300px;
+    height: 990px;
+    background-color: var(--secundario2); /* Reemplazado #2b2b5e */
+    color: var(--white);
+    padding: 20px;
+    position: fixed;
+    margin-top: -20px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .section-encabezado {
+        margin-left: 210px;
+    }
+
+    .subscription-box {
+        margin-left: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .sidebar.active {
+        width: 200px;
+        padding: 20px;
+    }
+
+    .section-encabezado, .subscription-box, .planes {
+        margin-left: 0;
+    }
+
+    /* Botón de menú hamburguesa */
+    .menu-toggle {
+        display: block;
+        background-color: var(--secundario2); /* Reemplazado #2b2b5e */
+        color: var(--white);
+        padding: 10px;
+        font-size: 18px;
+        cursor: pointer;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 1000;
+    }
+}

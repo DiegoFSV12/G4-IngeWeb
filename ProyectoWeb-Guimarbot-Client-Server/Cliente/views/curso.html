@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso - Guímarbot</title>
+    <link rel="icon" href="resources/img/logo_guimarbot-SinFondo.webp">
+    <style>        
+    </style>
+    <link rel="stylesheet" href="resources/css/curso.css">
+    <!--Google  y Bootstrap Icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <section class="curso-portada">
+        <div class="container">
+            <h1>Curso HTML desde cero</h1>
+            <div class="static-rating" data-rating="4">
+                <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+            </div>
+            <h4>Publicado el 5 de octubre de 2024</h4>
+            <p>En el curso de HTML, aprenderás a crear y estructurar sitios web desde cero utilizando el lenguaje fundamental para el desarrollo web: HTML, o HyperText Markup Language. A lo largo de este curso, te guiaré paso a paso para que puedas comprender y dominar las bases de este lenguaje, permitiéndote estructurar tu propio contenido en la web de manera clara y organizada.</p>
+            <div class="first-class">
+                <p>Mira la primera clase de este curso!</p>
+                <a href="carrito"><button>ADQUIRIR CURSO</button></a>
+            </div>
+        </div>
+        <div class="container-img">
+            <img src="resources/img/curso-html.webp" alt="Imagen del curso">
+        </div>
+    </section>
+    <h2 class="seccion">Contenido del curso</h2>
+    <section class="curso-temario">
+        <div class="container-info">
+            <h4>Para este curso vas a necesitar</h4>
+            <ul>
+                <li><span class="material-symbols-outlined g-icon">chronic</span><span>4</span> Horas de contenido</li>
+                <li><span class="material-symbols-outlined">laptop_chromebook</span><span>10</span> Horas de práctica</li>
+            </ul>
+        </div>
+        <div class="container-temario">
+            <div class="tema">
+                <h2>Introducción a HTML</h2>
+                <ul>
+                    <li><a href="#"><span class="material-symbols-outlined g-icon">play_arrow</span>Introducción al curso</a></li>
+                    <li><a href="#"><span class="material-symbols-outlined g-icon">play_arrow</span>¿Que es HTML?</a></li>
+                    <li><a href="#"><span class="material-symbols-outlined g-icon">play_arrow</span>Instalación de herramientas</a></li>
+                </ul>
+            </div>
+            <div class="tema">
+                <h2>HTML Básico</h2>
+                <ul>
+                    <li><a href="#"><span class="material-symbols-outlined g-icon">play_arrow</span>Propiedades básicas de HTML</a></li>
+                    <li><a href="#"><span class="material-symbols-outlined g-icon">play_arrow</span>Etiquetas de texto</a></li>
+                    <li><a href="#"><span class="material-symbols-outlined">block</span>Atiqueta de ancla</a></li>
+                </ul>
+            </div>
+            <div class="tema">  
+                <h2>Prueba Final</h2>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <h3>📄 Titulo de prueba final</h3>
+                            <label for="modalCheckbox" class="btn">Abrir Indicaciones</label>
+                        </a>
+                    </li>
+                </ul>
+            </div>                     
+        </div>
+        <!-- Checkbox oculto para controlar la visibilidad del modal -->
+        <input type="checkbox" id="modalCheckbox">
+
+        <!-- Modal -->
+<div class="modal">
+    <div class="modal-content">
+        <!-- Botón de cerrar el modal (controlado por el checkbox) -->
+        <label for="modalCheckbox" class="close-btn">×</label>
+
+        <!-- Encabezado del modal -->
+        <div class="modal-header">
+            Subir Evaluación
+        </div>
+
+        <!-- Contenido del formulario -->
+        <form id="evaluacionForm" action="/subir-evaluacion" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="indicaciones" class="form-label">Indicaciones:</label>
+                <p>Aquí puedes subir el archivo correspondiente a la evaluación. Asegúrate de que el archivo esté en formato PDF.</p>
+            </div>
+            <div class="form-group">
+                <label for="archivo" class="form-label">Subir archivo</label>
+                <input type="file" class="form-control" id="archivo" name="archivo" accept=".pdf" required>
+            </div>
+            <div class="modal-footer">
+                <label for="modalCheckbox" class="btn">Cerrar</label>
+                <button type="submit" class="btn" style="background-color: #28a745;">Subir archivo</button>
+            </div>
+                </form>
+        </div>
+        </div>
+
+    </section>
+    <h2 class="seccion">Comunidad</h2>
+    <section class="curso-comunidad">
+        <h2>Proyectos de estudiantes</h2>
+        <div class="container-projects">
+            <div class="project">
+                <img src="resources/img/proyecto (1).webp" alt="Captura">
+                <h4>Mi proyecto HTML</h4>
+                <div class="user">
+                    <img src="resources/img/logo_guimarbot.webp" alt="Usuario-foto">
+                    <p>Sanchez Vera Diego Fabrizio</p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="resources/img/proyecto (2).webp" alt="Captura">
+                <h4>Mi proyecto HTML</h4>
+                <div class="user">
+                    <img src="resources/img/logo_guimarbot.webp" alt="Usuario-foto">
+                    <p>Marticorena Garcia Edward</p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="resources/img/proyecto (3).webp" alt="Captura">
+                <h4>Mi proyecto HTML</h4>
+                <div class="user">
+                    <img src="resources/img/logo_guimarbot.webp" alt="Usuario-foto">
+                    <p>Escalante Rodriguez Boris</p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="resources/img/proyecto (4).webp" alt="Captura">
+                <h4>Mi proyecto HTML</h4>
+                <div class="user">
+                    <img src="resources/img/logo_guimarbot.webp" alt="Usuario-foto">
+                    <p>Rodriguez Chavez Jose David</p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="resources/img/proyecto (5).webp" alt="Captura">
+                <h4>Mi proyecto HTML</h4>
+                <div class="user">
+                    <img src="resources/img/logo_guimarbot.webp" alt="Usuario-foto">
+                    <p>Tragodara Angulo Daniel Andre</p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="resources/img/proyecto (6).webp" alt="Captura">
+                <h4>Mi proyecto HTML</h4>
+                <div class="user">
+                    <img src="resources/img/logo_guimarbot.webp" alt="Usuario-foto">
+                    <p>Cardenas Sachun Sebastian Eduardo</p>
+                </div>
+            </div>
+        </div>
+        <h2>Comentarios</h2>
+        <div class="container-comment">
+            <div class="comments">
+
+            </div>
+        </div>
+    </section>
+    <h2 class="seccion">Docente</h2>
+    <section class="curso-docente">
+        <div class="container-docente">
+            <img src="resources/img/logo_guimarbot.webp" alt="Foto del docente">
+            <h4>Mgtr.Vera Hans Omar Orlandini</h4>
+            <p>Ingeniero de Sistemas</p>
+        </div>
+        <div class="container-exp">
+            <ul>
+                <li>8 Años de experiencia en el sector eduacación.</li>
+                <li>Docente de la Universidad César Vallejo.</li>
+                <li>Fundador de la empresa ProgramArte.</li>
+                <li>Programador senior.</li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <img src="resources/img/logo_guimarbot.webp" alt="Logo">
+        <h4>Guímarbot - 2024 &#169;</h4>
+        <p>Siguenos en nuestras redes sociales</p>
+        <div class="container-redes">
+            <a href="https://www.facebook.com/GuimarbotPeru?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-facebook"></i>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-twitter-x"></i>
+            </a>
+            <a href="https://www.tiktok.com/@guimarbot.peru" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-tiktok"></i>
+            </a>
+        </div>
+    </footer>
+    <script src="resources/js/curso.js"></script>
+    <script src="resources/js/colores.js"></script>
+</body>
+</html>

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Administración - Guímarbot</title>
+    <link rel="stylesheet" href="resources/css/menu-lateral.css">
+    <link rel="stylesheet" href="resources/css/resources.css">
+    <link rel="icon" href="resources/img/logo_guimarbot-SinFondo.png">
+    <!--Bootstrap icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div class="menu">
+        <i class="bi bi-list"></i>
+    </div>
+
+    <div class="barra-lateral">
+        <div>
+            <div class="nombre-pagina">
+                <img src="resources/img/logo_guimarbot-SinFondo.png" alt="logo">
+                <span>Guímarbot</span>
+            </div>
+
+        </div>
+        <nav class="navegacion">
+            <ul>
+                <li>
+                    <a id="inbox" href="inbox.html">
+                        <i class="bi bi-envelope-fill"></i>
+                        <span>Bandeja de entrada</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="admin" href="admins.html">
+                        <i class="bi bi-people-fill"></i>
+                        <span>Administradores</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="users" href="users.html">
+                        <i class="bi bi-people"></i>
+                        <span>Usuarios</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="teachers" href="teachers.html">
+                        <i class="bi bi-person-badge"></i>
+                        <span>Docentes</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="certificates" href="certificates.html">
+                        <i class="bi bi-patch-check-fill"></i>
+                        <span>Certificados</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="scholarships" href="scholarships.html">
+                        <i class="bi bi-award-fill"></i>
+                        <span>Becas</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="resources" href="resource.html">
+                        <i class="bi bi-book-fill"></i>
+                        <span>Recursos</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="payments" href="payments.html">
+                        <i class="bi bi-cash"></i>
+                        <span>Pagos</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="statistics" href="statistics.html">
+                        <i class="bi bi-bar-chart-line-fill"></i>
+                        <span>Estadistica</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div>
+            <div class="linea"></div>
+            <div class="usuario">
+                <img src="resources/img/logo_guimarbot.png" alt="">
+                <div class="info-usuario">
+                    <div class="nombre-email">
+                        <span class="nombre"></span>
+                        <span class="email"></span>
+                        <span class="exit"><a href="#" id="logout-link">Cerrar sesión</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <main>
+        <nav>
+            <div class="nav-search-container">
+                <input type="text" placeholder="Buscar...">
+                <button class="material-symbols-outlined"><a href="#"><i class="bi bi-search"></i></a></button>
+            </div>
+        </nav>
+
+        <div class="container">
+            <h2>Gestor de Recursos</h2>
+            <div class="actions">
+                <p>Home / Recursos</p>
+                <button id="newRouteBtn">Nueva Ruta</button>
+                <button id="newCourceBtn">Nuevo Curso</button>
+                <button id="newResourceBtn">Nuevo Recurso</button>
+                <div>
+                    <label for="paymentMethod">Filtrar por tipo de recurso:</label>
+                    <select id="paymentMethod">
+                        <option value="all">Todos</option>
+                        <option value="Curso">Curso</option>
+                        <option value="Rutas">Rutas</option>
+                        <option value="Archivos">Archivos</option>
+                        <option value="Videos">Videos</option>
+                    </select>
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Tipo</th>
+                        <th>Descripción</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Curso de Java</td>
+                        <td>Video</td>
+                        <td>Introducción a Java</td>
+                        <td class="actions-table">
+                            <button class="view-btn">Ver</button>
+                            <button class="edit-btn">Editar</button>
+                            <button class="delete-btn">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Programación WEB</td>
+                        <td>Ruta</td>
+                        <td>Incluye cursos relacionados con desarrollo web</td>
+                        <td class="actions-table">
+                            <button class="view-route-btn">Ver</button>
+                            <button class="edit-route-btn">Editar</button>
+                            <button class="delete-btn">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Curso de Python</td>
+                        <td>Curso</td>
+                        <td>Fundamentos de Python para principiantes</td>
+                        <td class="actions-table">
+                            <button class="view-course-btn">Ver</button>
+                            <button class="edit-course-btn">Editar</button>
+                            <button class="delete-btn">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+        
+        <!-- Modal para agregar o editar recurso -->
+        <div id="addResourceModal" class="modal">
+            <div class="modal-content">
+                <h3>Agregar o Editar Recurso</h3>
+            
+                <!-- Selección del curso -->
+                <label for="resourceCourse">Curso:</label>
+                <select id="resourceCourse">
+                    <option value="1">Curso de Java</option>
+                    <option value="2">Curso de Python</option>
+                    <option value="3">Curso de Web</option>
+                </select><br>
+            
+                <!-- Campo de texto para ingresar el nombre del capítulo del curso -->
+                <label for="resourceChapterName">Nombre del Capítulo:</label>
+                <input type="text" id="resourceChapterName" placeholder="Ingrese el nombre del capítulo"><br>
+            
+                <!-- Campo numérico para ingresar el orden del capítulo del curso -->
+                <label for="resourceChapterOrder">Orden del Capítulo:</label>
+                <input type="number" id="resourceChapterOrder" placeholder="Ingrese el orden del capítulo"><br>
+            
+                <!-- Tipo de recurso (Video, Documento, etc.) -->
+                <label for="resourceType">Tipo de Recurso:</label>
+                <select id="resourceType">
+                    <option value="video">Video</option>
+                    <option value="document">Documento</option>
+                    <option value="file">Archivo</option>
+                </select><br>
+            
+                <!-- Subir el archivo del recurso -->
+                <label for="resourceFile">Subir Recurso:</label>
+                <input type="text" id="resourceFile" placeholder="Insertar URL"><br>
+            
+                <!-- Descripción del recurso -->
+                <label for="resourceDescription">Descripción:</label><br>
+                <textarea id="resourceDescription" placeholder="Descripción del recurso"></textarea><br>
+            
+                <!-- Selección del docente responsable del recurso -->
+                <label for="resourceTeacher">Docente a Cargo:</label>
+                <select id="resourceTeacher">
+                    <option value="1">Eduardo Cárdenas</option>
+                    <option value="2">María Pérez</option>
+                    <option value="3">Carlos Martínez</option>
+                </select><br>
+            
+                <!-- Botones de acción -->
+                <button id="addResourceSubmit">Agregar</button>
+                <button class="close-modal">Cancelar</button>
+            </div>
+        </div>
+        
+        
+        <!-- Modal para ver detalles del recurso -->
+        <div id="viewResourceModal" class="modal">
+            <div class="modal-content">
+                <h3>Detalles del Recurso</h3>
+                <p><strong>ID Recurso:</strong> 1</p>
+                <p><strong>Curso:</strong> Curso de Java</p>
+                <p><strong>Tipo de Recurso:</strong> Video</p>
+                <p><strong>Título del Recurso:</strong> Introducción a Java</p>
+                <p><strong>Descripción:</strong> Este video cubre los fundamentos de la programación en Java, incluyendo sintaxis, tipos de datos y estructuras de control.</p>
+                <p><strong>Formato:</strong> MP4</p>
+                <p><strong>Duración (para videos):</strong> 15 minutos</p>
+                <p><strong>Tamaño del archivo:</strong> 500 MB</p>
+                <p><strong>Docente a cargo:</strong> Eduardo Cárdenas</p>
+                <p><strong>Fecha de subida:</strong> 2023-05-10</p>
+                <p><strong>Subido por:</strong> Eduardo Cárdenas</p>
+                <p><strong>Accesible para:</strong> Todas las edades</p>
+                <p><strong>Capitulo del curso:</strong> 1</p>
+                <p><strong>Número de descargas:</strong> 120 descargas</p>
+
+                <!-- Opcional: Enlace de visualización del recurso, si aplica -->
+                <p><strong>Enlace para ver en línea:</strong> <a href="#" target="_blank">Ver Recurso</a></p>
+
+                <button class="close-modal">Cerrar</button>
+            </div>
+        </div>
+
+        
+        <!-- Modal para editar recurso -->
+        <div id="updateResourceModal" class="modal">
+            <div class="modal-content">
+                <h3>Actualizar Recurso</h3>
+                <label for="resourceCourseEdit">Curso:</label>
+                <select id="resourceCourseEdit">
+                    <option value="1">Curso de Java</option>
+                    <option value="2">Curso de Python</option>
+                    <option value="3">Curso de Web</option>
+                </select><br>
+        
+                <label for="resourceTypeEdit">Tipo de Recurso:</label>
+                <select id="resourceTypeEdit">
+                    <option value="video">Video</option>
+                    <option value="document">Documento</option>
+                    <option value="file">Archivo</option>
+                </select><br>
+
+                <label for="resourceDescriptionEdit">Descripción:</label><br>
+                <textarea id="resourceDescriptionEdit" placeholder="Descripción del recurso"></textarea><br>
+        
+                <!-- Selección del docente responsable del recurso -->
+                <label for="resourceTeacher">Docente a Cargo:</label>
+                <select id="resourceTeacher">
+                    <option value="1">Eduardo Cárdenas</option>
+                    <option value="2">María Pérez</option>
+                    <option value="3">Carlos Martínez</option>
+                    <!-- Más docentes si es necesario -->
+                </select><br>
+
+                <button id="updateResource">Actualizar</button>
+                <button class="close-modal">Cancelar</button>
+            </div>
+        </div>
+        
+        <!-- Modal para eliminar recurso -->
+        <div id="deleteResourceModal" class="modal">
+            <div class="modal-content">
+                <h3>¿Deseas eliminar este recurso?</h3>
+                <button id="deleteResource">Eliminar</button>
+                <button class="close-modal">Cancelar</button>
+            </div>
+        </div>
+    <!-- Modal para nueva ruta -->
+        <div id="routeModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" style="float:right;">&times;</span> <!-- Mover X a la derecha -->
+                <h2 id="routeModalTitle">Agregar Ruta</h2>
+                
+                <form id="routeForm">
+                    <label for="routeName">Nombre de la ruta:</label>
+                    <input type="text" id="routeName" name="routeName" required>
+        
+                    <button type="submit">Guardar Ruta</button>
+                </form>
+            </div>
+        </div>
+        
+
+
+        <!-- Modal para editar rutas-->
+<div id="editRouteModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Editar Ruta</h2>
+
+        <form id="editRouteForm">
+            <!-- Nombre de la Ruta -->
+            <div class="form-group">
+                <label for="routeName">Nombre de la Ruta:</label>
+                <input type="text" id="routeName" name="routeName" value="Programación WEB" required>
+            </div>
+
+            <!-- Descripción de la Ruta -->
+            <div class="form-group">
+                <label for="routeDescription">Descripción de la Ruta:</label>
+                <textarea id="routeDescription" name="routeDescription" rows="4"
+                    required>Incluye cursos relacionados con desarrollo web</textarea>
+            </div>
+
+            <!-- Secciones -->
+            <div id="sectionsContainer">
+                <h3>Secciones de la Ruta</h3>
+
+                <!-- Sección 1 -->
+                <div class="section">
+                    <h4>Sección 1</h4>
+                    <div class="form-group">
+                        <label for="section1Name">Nombre de la Sección:</label>
+                        <input type="text" id="section1Name" name="section1Name" value="Frontend" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="section1Courses">Selecciona los cursos y su orden:</label>
+                        <div id="section1CoursesContainer" class="sortable-courses">
+                            <ul id="section1CoursesList">
+                                <li data-value="html">Curso de HTML</li>
+                                <li data-value="css">Curso de CSS</li>
+                                <li data-value="javascript">Curso de JavaScript</li>
+                            </ul>
+                        </div>
+                        <small>Puedes seleccionar varios cursos y cambiar el orden arrastrando los elementos
+                            seleccionados.</small>
+                    </div>
+                </div>
+            </div>
+            <!-- Botón para agregar una nueva sección y para eliminarla -->
+            <button type="button" id="addSectionBtn">Agregar Sección</button>
+            <!-- Botones de acción -->
+            <div class="form-actions">
+                <button type="submit" class="save-btn">Guardar Cambios</button>
+                <button class="close-modal">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+        <!-- Modal para ver detalles de la ruta -->
+        <div id="viewRouteModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" style="float:right;">&times;</span>
+                <h3>Detalles de la Ruta</h3>
+                <p><strong>ID Ruta:</strong> 2</p>
+                <p><strong>Nombre de la Ruta:</strong> Programación WEB</p>
+                <p><strong>Tipo:</strong> Ruta</p>
+                <p><strong>Cursos que forman parte de la ruta:</strong></p>
+                <ul id="routeCoursesList">
+                    <li>Curso de HTML</li>
+                    <li>Curso de CSS</li>
+                    <li>Curso de JavaScript</li>
+                </ul>
+                <button class="close-modal">Cerrar</button>
+            </div>
+        </div>
+
+
+        <!-- Modales para Agregar, Ver y Editar Curso -->
+<div id="addCourseModal" class="modal">
+    <div class="modal-content">
+        <h3>Agregar Curso</h3>
+        <form action="" id="cursoForm">
+        <label for="courseName">Nombre del Curso:</label>
+        <input type="text" id="courseName" placeholder="Ingrese el nombre del curso"><br>
+
+        <label for="courseDescription">Descripción del Curso:</label>
+        <textarea id="courseDescription" placeholder="Ingrese la descripción del curso"></textarea><br>
+
+        <div id="routeContent">
+            <!-- Combobox de curso -->
+            <div class="content-item">
+                <label for="courseSelect">Seleccionar ruta:</label>
+                <select class="courseSelect" name="courseSelect[]">
+                    <option value="ruta1">Ruta1</option>
+                    <option value="ruta2">Ruta2</option>
+                    <!-- Agrega más opciones según sea necesario -->
+                </select>
+                <ul id="courseList"></ul>
+                <button type="button" class="add-content-btn">+</button>
+                <button type="button" class="remove-content-btn">-</button>
+            </div>
+        </div>
+        <button id="addCourseSubmit">Agregar</button>
+        <button class="close-modal">Cancelar</button>
+        </form>
+    </div>
+</div>
+
+<div id="viewCourseModal" class="modal">
+    <div class="modal-content">
+        <h3>Detalles del Curso</h3>
+        <p><strong>ID Curso:</strong> <span id="viewCourseId"></span></p>
+        <p><strong>Nombre del Curso:</strong> <span id="viewCourseName"></span></p>
+        <p><strong>Descripción:</strong> <span id="viewCourseDescription"></span></p>
+        <button class="close-modal">Cerrar</button>
+    </div>
+</div>
+
+<div id="editCourseModal" class="modal">
+    <div class="modal-content">
+        <h3>Editar Curso</h3>
+        <label for="editCourseName">Nombre del Curso:</label>
+        <input type="text" id="editCourseName"><br>
+
+        <label for="editCourseDescription">Descripción del Curso:</label>
+        <textarea id="editCourseDescription"></textarea><br>
+
+        <div id="routeContent">
+            <!-- Combobox de curso -->
+            <div class="content-item">
+                <label for="courseSelect">Seleccionar ruta:</label>
+                <select class="courseSelect" name="courseSelect[]">
+                    <option value="ruta1">Ruta1</option>
+                    <option value="ruta2">Ruta2</option>
+                    <!-- Agrega más opciones según sea necesario -->
+                </select>
+                <ul id="courseList"></ul>
+                <button type="button" class="add-content-btn">+</button>
+                <button type="button" class="remove-content-btn">-</button>
+            </div>
+        </div>
+
+        <button id="editCourseSubmit">Actualizar</button>
+        <button class="close-modal">Cancelar</button>
+    </div>
+</div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <script src="resources/js/menu-lateral.js"></script>
+    <script src="resources/js/resources.js"></script>
+</body>
+</html>

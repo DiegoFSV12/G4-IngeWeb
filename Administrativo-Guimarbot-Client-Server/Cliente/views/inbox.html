@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Administración - Guímarbot</title>
+    <link rel="stylesheet" href="resources/css/menu-lateral.css">
+    <link rel="stylesheet" href="resources/css/inbox.css">
+    <link rel="icon" href="resources/img/logo_guimarbot-SinFondo.png">
+    <!--Bootstrap icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div class="menu">
+        <i class="bi bi-list"></i>
+    </div>
+
+    <div class="barra-lateral">
+        <div>
+            <div class="nombre-pagina">
+                <img src="resources/img/logo_guimarbot-SinFondo.png" alt="logo">
+                <span>Guímarbot</span>
+            </div>
+
+        </div>
+        <nav class="navegacion">
+            <ul>
+                <li>
+                    <a id="inbox" href="inbox.html">
+                        <i class="bi bi-envelope-fill"></i>
+                        <span>Bandeja de entrada</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="admin" href="admins.html">
+                        <i class="bi bi-people-fill"></i>
+                        <span>Administradores</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="users" href="users.html">
+                        <i class="bi bi-people"></i>
+                        <span>Usuarios</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="teachers" href="teachers.html">
+                        <i class="bi bi-person-badge"></i>
+                        <span>Docentes</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="certificates" href="certificates.html">
+                        <i class="bi bi-patch-check-fill"></i>
+                        <span>Certificados</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="scholarships" href="scholarships.html">
+                        <i class="bi bi-award-fill"></i>
+                        <span>Becas</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="resources" href="resource.html">
+                        <i class="bi bi-book-fill"></i>
+                        <span>Recursos</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="payments" href="payments.html">
+                        <i class="bi bi-cash"></i>
+                        <span>Pagos</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="statistics" href="statistics.html">
+                        <i class="bi bi-bar-chart-line-fill"></i>
+                        <span>Estadistica</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div>
+            <div class="linea"></div>
+            <div class="usuario">
+                <img src="resources/img/logo_guimarbot.png" alt="">
+                <div class="info-usuario">
+                    <div class="nombre-email">
+                        <span class="nombre"></span>
+                        <span class="email"></span>
+                        <span class="exit"><a href="#" id="logout-link">Cerrar sesión</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <main>
+        <!-- Submenú -->
+        <nav>
+            <div class="nav-tabs">
+                <a href="inbox.html" class="tab active">Bandeja de entrada</a>
+                <a href="response-history.html" class="tab">Historial de respuestas</a>
+            </div>
+        </nav>
+    
+        <nav>
+            <div class="nav-search-container">
+                <input type="text" placeholder="Buscar...">
+                <button class="material-symbols-outlined"><a href="#"><i class="bi bi-search"></i></a></button>
+            </div>
+        </nav>
+        <div class="container">
+            <table class="email-list">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>De</th>
+                        <th>Asunto</th>
+                        <th class="time">Fecha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><button class="open-btn" onclick="openModal('Ana Pérez', 'Consulta sobre curso de Python', 'Hola, estoy interesada en el curso de Python avanzado. ¿Podrías indicarme si es necesario haber completado el curso de fundamentos antes de inscribirme? Gracias.')">Responder</button></td>
+                        <td>Ana Pérez</td>
+                        <td><span class="subject">Consulta sobre curso de Python</span></td>
+                        <td class="time">10 oct</td>
+                    </tr>
+                    <tr>
+                        <td><button class="open-btn" onclick="openModal('Juan Rodríguez', 'Problemas con la certificación', 'Hola, terminé el curso de JavaScript, pero no puedo acceder a mi certificación. ¿Podrían ayudarme?')">Responder</button></td>
+                        <td>Juan Rodríguez</td>
+                        <td><span class="subject">Problemas con la certificación</span></td>
+                        <td class="time">10 oct</td>
+                    </tr>
+                    <tr>
+                        <td><button class="open-btn" onclick="openModal('Laura Gómez', 'Consulta sobre plan premium', 'Hola, quisiera saber más detalles sobre el plan 2x1. ¿Ofrecen descuentos por pago anual? Gracias.')">Responder</button></td>
+                        <td>Laura Gómez</td>
+                        <td><span class="subject">Consulta sobre plan 2x1</span></td>
+                        <td class="time">9 oct</td>
+                    </tr>
+                    <tr>
+                        <td><button class="open-btn" onclick="openModal('Carlos Méndez', 'Acceso a curso bloqueado', 'He intentado acceder al curso de Diseño UX, pero aparece como bloqueado. ¿Podrían revisar mi cuenta?')">Responder</button></td>
+                        <td>Carlos Méndez</td>
+                        <td><span class="subject">Acceso a curso bloqueado</span></td>
+                        <td class="time">9 oct</td>
+                    </tr>
+                    <tr>
+                        <td><button class="open-btn" onclick="openModal('María Fernández', 'Solicitud de reembolso', 'Me inscribí en el curso de React, pero no es lo que esperaba. ¿Es posible solicitar un reembolso?')">Responder</button></td>
+                        <td>María Fernández</td>
+                        <td><span class="subject">Solicitud de reembolso</span></td>
+                        <td class="time">9 oct</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
+        <!-- Modal -->
+        <div id="emailModal" class="modal">
+            <div class="modal-content">
+                <h2 id="modalTitle"></h2>
+                <p id="modalBody"></p>
+                
+                <!-- Respuesta -->
+                <div class="response-area">
+                    <label for="responseText">Escribe tu respuesta:</label>
+                    <textarea id="responseText" rows="4" placeholder="Escribe tu respuesta aquí..."></textarea>
+                </div>
+    
+                <button class="send-btn" onclick="sendResponse()">Enviar Respuesta</button>
+                <button class="close-btn" onclick="closeModal()">Cerrar</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="resources/js/menu-lateral.js"></script>
+    <script src="resources/js/inbox.js"></script>
+</body>
+</html>

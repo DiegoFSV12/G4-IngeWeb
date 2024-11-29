@@ -1,0 +1,122 @@
+.container {
+    position:absolute;
+    z-index: 2;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+body{
+  position: sticky;
+  background: url("../img/fondo-guimarbot.webp") no-repeat center center; 
+  background-size: cover; /* Se asegura de que el png cubra toda la pantalla */
+  width: 100vw;
+  height: 100vh;
+}
+    .topleft {
+        position: absolute;
+        top: 8px;
+        left: 16px;
+        font-size: 18px;
+      }
+      .topright {
+        position: absolute;
+        top: 8px;
+        right: 16px;
+        font-size: 18px;
+      }
+      h1 {
+          
+        font-family: "Trirong", serif;
+      }
+      h5 {
+          font-family: "Trirong", serif;
+      }
+    div {
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    }
+
+    .right {
+    float: right;
+    width: 200px;
+    border: 3px solid #73AD21;
+    padding: 10px;
+    }
+    .center {
+    padding: 70px 0;
+    text-align: center;
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+}
+    hr {
+    height:10px;
+    border-width:0;
+    color: #fff;
+    background-color: #fff;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+/* Pantallas pequeñas (móviles en modo retrato) */
+@media (max-width: 800px) {
+  .center {
+    width: 90%; /* Asegura que el contenido ocupe la mayor parte de la pantalla en móviles */
+  }
+  
+  h1 {
+    font-size: 24px; /* Ajusta el tamaño de las fuentes para pantallas pequeñas */
+  }
+
+  h5 {
+    font-size: 16px;
+  }
+
+  .right {
+    width: 100%; /* Elimina el float y deja que ocupe todo el ancho */
+    float: none;
+    border: 2px solid #73AD21; /* Ajusta el tamaño del borde para pantallas pequeñas */
+  }
+  
+  .topleft, .topright {
+    font-size: 14px; /* Reduce el tamaño de la fuente en las esquinas superiores */
+  }
+
+  li a {
+    padding: 10px 8px; /* Reduce el tamaño del padding en los enlaces de la navegación */
+  }
+}

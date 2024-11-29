@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Administración - Guímarbot</title>
+    <link rel="stylesheet" href="resources/css/menu-lateral.css">
+    <link rel="stylesheet" href="resources/css/teachers.css">
+    <link rel="icon" href="resources/img/logo_guimarbot-SinFondo.png">
+    <!--Bootstrap icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div class="menu">
+        <i class="bi bi-list"></i>
+    </div>
+
+    <div class="barra-lateral">
+        <div>
+            <div class="nombre-pagina">
+                <img src="resources/img/logo_guimarbot-SinFondo.png" alt="logo">
+                <span>Guímarbot</span>
+            </div>
+
+        </div>
+        <nav class="navegacion">
+            <ul>
+                <li>
+                    <a id="inbox" href="inbox.html">
+                        <i class="bi bi-envelope-fill"></i>
+                        <span>Bandeja de entrada</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="admin" href="admins.html">
+                        <i class="bi bi-people-fill"></i>
+                        <span>Administradores</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="users" href="users.html">
+                        <i class="bi bi-people"></i>
+                        <span>Usuarios</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="teachers" href="teachers.html">
+                        <i class="bi bi-person-badge"></i>
+                        <span>Docentes</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="certificates" href="certificates.html">
+                        <i class="bi bi-patch-check-fill"></i>
+                        <span>Certificados</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="scholarships" href="scholarships.html">
+                        <i class="bi bi-award-fill"></i>
+                        <span>Becas</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="resources" href="resource.html">
+                        <i class="bi bi-book-fill"></i>
+                        <span>Recursos</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="payments" href="payments.html">
+                        <i class="bi bi-cash"></i>
+                        <span>Pagos</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="statistics" href="statistics.html">
+                        <i class="bi bi-bar-chart-line-fill"></i>
+                        <span>Estadistica</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div>
+            <div class="linea"></div>
+            <div class="usuario">
+                <img src="resources/img/logo_guimarbot.png" alt="">
+                <div class="info-usuario">
+                    <div class="nombre-email">
+                        <span class="nombre"></span>
+                        <span class="email"></span>
+                        <span class="exit"><a href="#" id="logout-link">Cerrar sesión</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <main>
+        <nav>
+            <div class="nav-search-container">
+                <input type="text" placeholder="Buscar...">
+                <button class="material-symbols-outlined"><a href="#"><i class="bi bi-search"></i></a></button>
+            </div>
+        </nav>
+
+        <div class="container">
+            <h2>Gestor de Docentes</h2>
+            <div class="actions">
+                <p>Home / Docentes</p>
+                <button id="newAdminBtn">Nuevo Docente</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Correo</th>
+                        <th>Fecha de Nacimiento</th>
+                        <th>DNI</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Eduardo</td>
+                        <td>Cardenas</td>
+                        <td>ecardenas@example.com</td>
+                        <td>01/01/1990</td>
+                        <td>12345678</td>
+                        <td class="actions-table">
+                            <button class="view-btn">Ver</button>
+                            <button class="edit-btn">Editar</button>
+                            <button class="delete-btn">Desactivar Cuenta</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
+        
+        <!-- Modal para editar docente -->
+        <div id="updateTeacherModal" class="modal">
+            <div class="modal-content">
+                <h3>Actualizar Docente</h3>
+                <input type="text" id="teacherName" placeholder="Nombre">
+                <input type="text" id="teacherLastName" placeholder="Apellido">
+                <input type="email" id="teacherEmail" placeholder="Correo">
+                <p><strong>Fecha de Nacimiento:</strong></p>
+                <input type="date" id="teacherDOB" placeholder="Fecha de Nacimiento">
+                <input type="text" id="teacherDNI" placeholder="DNI">
+                <input type="tel" id="teacherPhone" placeholder="Teléfono">
+                <!-- Combobox de materias -->
+                <div class="content-item">
+                    <label for="materiaSelect">Materias:</label>
+                    <select class="materiaSelect" name="materiaSelect[]">
+                        <option value="Programacion">Programación</option>
+                        <option value="Robotica">Robotica</option>
+                        <!-- Agrega más opciones según sea necesario -->
+                    </select>
+                    <ul class="materiaList"></ul>
+                    <button type="button" class="add-content-btn">+</button>
+                    <button type="button" class="remove-content-btn">-</button>
+                </div>
+                <button id="updateTeacher">Actualizar</button>
+                <button class="close-modal">Cancelar</button>
+            </div>
+        </div>
+        
+        <!-- Modal para agregar docente -->
+        <div id="addTeacherModal" class="modal">
+            <div class="modal-content">
+                <h3>Agregar Nuevo Docente</h3>
+                <input type="text" id="teacherName" placeholder="Nombre">
+                <input type="text" id="teacherLastName" placeholder="Apellido">
+                <input type="email" id="teacherEmail" placeholder="Correo">
+                <p><strong>Fecha de Nacimiento:</strong></p>
+                <input type="date" id="teacherDOB" placeholder="Fecha de Nacimiento">
+                <input type="text" id="teacherDNI" placeholder="DNI">
+                <input type="tel" id="teacherPhone" placeholder="Teléfono">
+                <!-- Combobox de materias -->
+                <div class="content-item">
+                    <label for="materiaSelect">Materias:</label>
+                    <select class="materiaSelect" name="materiaSelect[]">
+                        <option value="Programacion">Programación</option>
+                        <option value="Robotica">Robotica</option>
+                        <!-- Agrega más opciones según sea necesario -->
+                    </select>
+                    <ul class="materiaList"></ul>
+                    <button type="button" class="add-content-btn">+</button>
+                    <button type="button" class="remove-content-btn">-</button>
+                </div>
+                <button id="addTeacherSubmit">Agregar</button>
+                <button class="close-modal">Cancelar</button>
+            </div>
+        </div>
+        
+
+        <!-- Modal para ver detalles del docente -->
+        <div id="viewTeacherModal" class="modal">
+            <div class="modal-content">
+                <h3>Detalles del Docente</h3>
+                <p><strong>ID:</strong> 1</p>
+                <p><strong>Nombre:</strong> Eduardo</p>
+                <p><strong>Apellido:</strong> Cardenas</p>
+                <p><strong>Correo:</strong> ecardenas@example.com</p>
+                <p><strong>Fecha de Nacimiento:</strong> 01/01/1990</p>
+                <p><strong>DNI:</strong> 12345678</p>
+                <p><strong>Teléfono:</strong> 949971048</p>
+                <p><strong>Estado:</strong> Activo</p>
+                <p><strong>Materias:</strong> Programación</p>
+                <p><strong>Lista de cursos:</strong></p>
+                <ul id="courseList">
+                    <li>SQL: Consultas básicas a complejas</li>
+                    <li>Curso Python: De Principiante a Avanzado</li>
+                    <li>Curso de Java - Nivel Basico</li>
+                </ul>
+                <button class="close-modal">Cerrar</button>
+            </div>
+        </div>
+
+        <!-- Modal para eliminar docente -->
+        <div id="deleteTeacherModal" class="modal">
+            <div class="modal-content">
+                <h3>¿Deseas desactivar la cuenta a este Docente?</h3>
+                <button id="deleteTeacher">Desactivar</button>
+                <button class="close-modal">Cancelar</button>
+            </div>
+        </div>
+
+    </main>
+    <script src="resources/js/menu-lateral.js"></script>
+    <script src="resources/js/teachers.js"></script>
+</body>
+</html>

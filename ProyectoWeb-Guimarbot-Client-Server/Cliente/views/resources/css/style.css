@@ -1,0 +1,468 @@
+*{
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+/*Navbar*/
+body{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+
+.logo{
+    width: 40px;
+}
+
+nav{
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--white);
+}
+
+.nav-logo-container, .nav-btn-container, .nav-search-container{
+    display: flex;
+    align-items: center;
+    margin: 0 25px;
+    gap: 10px;
+}
+
+.nav-btn-container a{
+    border: 1px solid var(--black);
+    background-color: var(--primario1);
+    padding: 8px;
+    border-radius: 5px;
+}
+.nav-logo-container a{
+    font-size: 18px;
+    font-weight: bold;
+}
+.nav-search-container{
+    flex: 2;
+    justify-content: center;
+    gap: 0;
+}
+
+.nav-search-container input{
+    width: 60%;
+    height: 40px;
+    padding: 5px;
+    border: 1px solid var(--primario2);
+    box-sizing: border-box;
+    border-radius: 10px 0 0 10px;
+}
+.nav-search-container button{
+    height: 40px;
+    border: 1px solid var(--primario2);
+    box-sizing: border-box;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    font-size: 2.5rem;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.section-titulo{
+    font-size: 2rem;
+    padding: 15px 0;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.section-description{
+    font-size: 1.2rem;
+    color: #584e4e;
+}
+.section-text{
+    font-size: 1.2rem;
+}
+.dark-section{
+    color: var(--primario1);
+    background-color: var(--dark);
+}
+.light-section{
+    color: var(--black);
+    background-color: var(--primario1);
+}
+/*Novedades*/
+/* Limitar el ancho del carrusel */
+#carouselExampleCaptions {
+    max-width: 2000px;
+    margin: auto; /* Centra el carrusel*/
+}
+
+/* Hacer las imágenes responsivas */
+#carouselExampleCaptions img {
+    width: 100%; 
+    height: auto;
+    object-fit: cover; /* Asegura que la imagen se ajuste al contenedor sin deformarse */
+}
+
+/* Controlar la altura del carrusel */
+.carousel-item {
+    max-height: 500px;
+    overflow: hidden;  /* Oculta cualquier parte que sobrepase el límite de altura */
+}
+
+/* Estilos para las leyendas */
+.carousel-caption {
+    background-color: var(--carousel-overlay);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Estilos para el texto de las leyendas en pantallas medianas y grandes */
+.carousel-caption h5 {
+    font-size: 1.8rem;
+    color: var(--primario1); 
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+    color: var(--primario1);
+}
+
+/* Ajustar el tamaño de los botones de control del carrusel */
+.carousel-control-prev, .carousel-control-next {
+    width: 5%;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: var(--carousel-overlay);
+    border-radius: 50%; 
+}
+/* Cursos */
+.cursos-recientes {
+    padding: 40px;
+}
+
+.curso-container {
+    padding-top: 60px;
+    margin-bottom: 40px;
+}
+
+.curso {
+    position: relative;
+    width: 100%;
+    max-width: 300px; /* Ajusta este valor según el tamaño deseado */
+    height: 200px; /* Ajusta la altura deseada */
+    margin: 10px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.curso img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene la proporción de la imagen y la recorta si es necesario */
+    transition: opacity 0.2s ease;
+}
+
+.overlay {
+    transition: all 0.2s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.overlay p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.curso:hover img {
+    opacity: 0.2;
+}
+
+.curso:hover .overlay {
+    opacity: 1;
+}
+
+.curso .icon-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.curso i {
+    color: var(--black);
+    font-size: 50px;
+}
+
+
+/*Planes*/
+.planes{
+    padding: 40px 40px 60px 40px;
+}
+.icon-shop{
+    font-size: 2.5rem;
+    color: var(--primario1);
+    background-color: var(--secundario2);;
+    padding: 8px 19px;
+    border-radius: 50%;
+    margin: 10px 0;
+}
+
+.planes-titulo{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.planes .column{
+    padding: 20px;
+    border: 2px solid var(--light-gray-translucent);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: color 0.2s ease-in, background-color 0.2s ease-in;
+}
+.planes .column:hover{
+    color: var(--primario1);
+    background-color: var(--dark);
+}
+
+.column h4{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+/*Testimonios*/
+.testimony{
+    padding: 40px 40px 80px 40px;
+}
+.testimony .carousel{
+    max-width: 800px;
+}
+.carousel-item{
+    min-height: 500px;
+}
+.carousel-item .container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.testimony-img{
+    height: 150px;
+    width: 150px;
+    margin: 10px 10px 20px 10px;
+}
+.testimony-text{
+    max-width: 70%;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Share Tech Mono', monospace;
+}
+.testimony-info{
+    font-weight: bold;
+    text-align: center;
+}
+.testimony-info p{
+    margin-bottom: 0;
+}
+.testimony-info .client-name{
+    font-size: 1.2rem;
+}
+.testimony-info .client-position{
+    font-size: 0.9rem;
+    color: var(--terciario2);
+}
+
+/*Contacto*/
+.contact .container{
+    max-width: 1100px;
+    min-height: 200px;
+    padding: 20px;
+}
+.contact .rectangle{
+    margin-top: -5rem;
+    background-color: var(--secundario1);
+    border-radius: 10px;
+    box-shadow: 0 px 4px 1px var(--primario1) ;
+}
+.contact .row{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.contact .description{
+    color: var(--primario1);
+    font-size: 1.2rem;
+}
+.contact button{
+    color: var(--primario1);
+    font-weight: bold;
+    background-color: transparent;
+    border: 2px solid var(--primario1);
+    padding: 0.5em 2em;
+    margin: 10px;
+    border-radius: 100px;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+.contact button i{
+    color: var(--primario1);
+    font-size: 1.3rem;
+    transition: color 0.2s ease-in-out;
+}
+.contact button:hover{
+    background-color: var(--primario1);
+    color: var(--black);
+}
+.contact button:hover i{
+    color: var(--black);
+}
+
+/*Footer*/
+footer{
+    min-height: 500px;
+}
+.footer-icon{
+    height: 80px;
+    width: 80px;
+    margin: 10px;
+}
+.footer-text{
+    font-size: 1.5rem;
+    padding: 20px;
+    margin-bottom: 30px;
+    font-family: 'Quicksand', sans-serif;
+}
+.social-icons a{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    margin: 10px;
+    border: 2px solid var(--primario1);
+    border-radius: 50%;
+    transition: background-color 0.2s ease-in, border 0.2s ease-in;
+}
+.social-icons i{
+    color: var(--primario1);
+    font-size: 1.5rem;
+    transition: color 0.2s ease-in;
+}
+.social-icons a:hover{
+    background-color: var(--primario1);
+    border: 2px solid var(--secundario1);
+}
+.social-icons a:hover i{
+    color: var(--black);
+}
+
+.copyright{
+    font-size: 15px;
+    color: var(--grayish-white);
+    padding: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--secundario2);
+}
+
+.beca-section {
+    padding: 50px 0;
+}
+
+.beca-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-description {
+    font-size: 1.2rem;
+    color: var(--terciario1);
+    margin: 20px 0;
+}
+
+.beneficios-lista {
+    list-style: none;
+    padding-left: 0;
+}
+
+.beneficios-lista li {
+    font-size: 1rem;
+    color: var(--terciario1);
+    margin-bottom: 10px;
+}
+
+.beneficios-lista li::before {
+    content: '✔';
+    margin-right: 10px;
+    color: green;
+}
+
+.beca-btn {
+    background-color: var(--secundario3);
+    color: var(--primario1);
+    border-radius: 30px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+}
+
+.beca-btn:hover {
+    background-color: var(--black);
+    color: var(--primario1);
+}
+
+.beca-imagen {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.container-cursos-basicos{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.curso-basico{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.curso-basico img{
+    max-width: 150px;
+}
+.curso-basico h4{
+    font-size: 12px;
+    text-align: center;
+}
+
+h1,h2,h3,h4,p,a{
+    color: var(--dark);
+}
+
+/*Filas en la Vista del Carrito de Compras*/
+.fakeimg {
+    width: 90px;
+  }

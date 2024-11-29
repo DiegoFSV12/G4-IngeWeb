@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Barra lateral */
+.sidebar {
+    z-index: 1000;
+    width: 300px;
+    height: 100%;
+    background-color: var(--secundario2); /* Reemplazado #2b2b5e */
+    color: var(--white);
+    padding: 20px;
+    margin-left: -320px;
+    margin-top: -20px;
+    position: fixed;
+    transition: all 0.3s ease-in-out; /* Transición suave para móviles */
+}
+
+/* Perfil */
+.profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.profile p {
+    font-size: 14px;
+    margin: 3px 0;
+}
+
+/* Menú */
+.menu ul {
+    list-style: none;
+    padding: 10px;
+}
+
+.menu ul li {
+    margin: 15px 0;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 16px;
+}
+
+.menu ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Contenido general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--primario1); /* Reemplazado #f4f6f9 */
+    color: var(--terciario1); /* Reemplazado #333 */
+    margin-left: 320px; /* Espacio para la barra lateral */
+    transition: margin-left 0.3s ease;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    color: var(--secundario2); /* Reemplazado #2b2b5e */
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-size: 16px;
+    color: var(--terciario1); /* Reemplazado #333 */
+}
+
+.form-control {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--primario2); /* Reemplazado #ccc */
+}
+
+.btn-primary {
+    background-color: var(--secundario2); /* Reemplazado #2b2b5e */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: var(--dark); /* Reemplazado #1f1f4b */
+}
+
+.d-flex {
+    display: flex;
+}
+
+.me-2 {
+    margin-right: 10px;
+}
+
+/* Media Queries */
+
+/* Para pantallas medianas (tablets) */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+        margin-left: -220px;
+    }
+
+    body {
+        margin-left: 220px;
+    }
+
+    .section-encabezado {
+        margin-left: 210px;
+    }
+
+    .subscription-box {
+        margin-left: 220px;
+    }
+}
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 576px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        margin-left: 0;
+    }
+
+    body {
+        margin-left: 0;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .form-label, .form-control {
+        font-size: 14px;
+    }
+
+    .btn-primary {
+        width: 100%;
+    }
+
+    .d-flex {
+        flex-direction: column;
+    }
+
+    .me-2 {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* Estilos existentes */
+.sidebar {
+    width: 300px;
+    height: 990px;
+    background-color: var(--secundario2); /* Reemplazado #2b2b5e */
+    color: var(--white);
+    padding: 20px;
+    position: fixed;
+    margin-top: -20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.route-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.route-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primario1);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.route-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.route-name {
+    flex-grow: 1;
+    font-size: 18px;
+}
+
+.route-actions {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.view-btn {
+    background-color: var(--secundario1); /* Reemplazado #3498db */
+    color: var(--white);
+}
+
+.delete-btn {
+    background-color: #f11; /* Reemplazado #e74c3c */
+    color: var(--white);
+}
+
+/* Para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .section-encabezado {
+        margin-left: 210px;
+    }
+
+    .subscription-box {
+        margin-left: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .sidebar.active {
+        width: 200px;
+        padding: 20px;
+    }
+
+    .section-encabezado, .subscription-box, .planes {
+        margin-left: 0;
+    }
+
+    /* Botón de menú hamburguesa */
+    .menu-toggle {
+        display: block;
+        background-color: var(--secundario2); /* Reemplazado #2b2b5e */
+        color: var(--white);
+        padding: 10px;
+        font-size: 18px;
+        cursor: pointer;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 1000;
+    }
+}

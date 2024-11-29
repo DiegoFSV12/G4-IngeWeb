@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--white);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--dark);
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.background-image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-top: 20px;
+    padding-right: 20px;
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    opacity: 0.2;
+    z-index: -1;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .background-image {
+        width: 80%;
+        padding-right: 10px;
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .background-image {
+        width: 70%;
+        padding-right: 5px;
+        padding-top: 5px;
+    }
+}
+
+.hero {
+    padding: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    max-width: 60%;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    color: var(--secundario1);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filters select {
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: var(--secundario2);
+    color: var(--white);
+    border: none;
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .filters {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .filters select {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 1.2rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .filters select {
+        max-width: 100%;
+    }
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    margin: 2rem 0;
+}
+
+.separator .line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: var(--secundario2);
+}
+
+.separator .text {
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    background-color: var(--secundario2);
+    border: 1px solid var(--secundario2);
+    margin: 0 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.separator .text span {
+    color: var(--white);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+}
+
+.courses {
+    padding: 2rem;
+}
+
+.courses h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--secundario1);
+    margin-right: 1rem;
+}
+
+.courses p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.course-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 1rem 0;
+}
+
+.course-name {
+    display: flex;
+}
+
+.course-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+.course-title h2 {
+    margin: 0;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+}
+
+.add-route {
+    color: #00e676;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.add-route svg {
+    margin-right: 8px;
+}
+
+.course-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: left;
+    margin-bottom:60px;
+}
+
+.course {
+    max-width: 320px;
+    padding: 1rem;
+    background-color: var(--terciario2);
+    border-radius: 5px;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.05);
+}
+
+.course-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.course-title {
+    font-weight: 600;
+}
+
+.course-description {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.course-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    column-gap: 1rem;
+    flex-shrink: 0;
+}
+
+.course-pref {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    color: var(--grayish-white);
+    background-color: transparent;
+}
